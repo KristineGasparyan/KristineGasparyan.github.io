@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>GAME OF X/O</title>
+	<meta charset ="urf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="game.js"></script>
+
+	<link href="x_o.css" rel="stylesheet"/>
+	
+	
+</head>
+<body onload="">
+	<button id = "mainPage">
+			<a href="selectGame.html" id = "a">  ⇐</a> 
+	</button>
+	
+	<div id = "levelDiv">
+
+		<p id = "levelP">Enter</p>
+		<p id = "entS1">Box size:</p>
+		<input type="text" name="" id="input">
+
+		<p id = "entS2">Sequent size:</p>
+		<input type="text" id = "sequentSize">
+		<button id = "start" onclick="checkSequent()"> START </button>
+
+	</div>
+
+</body>
+</html>

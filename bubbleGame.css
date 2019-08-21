@@ -1,0 +1,377 @@
+body {
+    background-color: #FFFAF0;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    white-space: none;
+    position: fixed;
+}
+
+.img {
+    width: 200px; 
+}
+
+#timer { 
+    width: 10%;
+    margin: auto;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
+    color:  #5b166d;
+    animation: beatBeat 0.9s ease alternate infinite;
+}
+
+@keyframes beatBeat {
+    0% {
+        transform: scale(1);
+
+    }
+    80% {
+        transfom: scale(1);
+    }
+    100% {
+        transform: scale(1.3);
+        transition-property: transform;
+        transition-duration: 1s;
+    }
+} 
+   
+#scoreDiv {
+    margin: auto;
+    margin-top: 20px;
+    height: 70px;
+    width: 40%;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-large;
+    font-weight: 900;
+    color: rgba(190, 57, 202, 0.863);
+}
+
+#div {
+    height: 600px;
+    width: 40%;
+    margin: auto;
+    position: relative;
+    display: block;
+    background: -webkit-radial-gradient(circle, #f06afc, #491755);
+    overflow: hidden;
+    border: 1px solid blak;
+    border-radius: 5%;
+    
+}
+
+.intro {
+    animation: fade 1s 2s linear reverse forwards;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    animation-name: fade;
+    padding-bottom: 15px; 
+    text-align: center;
+    z-index: 0;
+    display:block;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: calc(20pt + 1.1vw);
+    color: #751a8b;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    1% {
+        opacity: 0;
+        visibility: visible;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+button {
+  outline: none;
+}
+
+#butt {
+    height: 120px;
+    width: 120px;
+    border: 0cm;
+    background-color: #491755;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: calc(20pt + 1.1vw);
+    color: #f06afc;
+    display: block;
+    margin: 0 auto;
+    margin-top: 250px;
+    border-radius: 50%;   
+}
+
+#butt:hover {
+    color: rgb(255, 255, 255);
+    letter-spacing: 5px;
+ 
+    transition: all 0.5s ease 0s;
+    -webkit-box-shadow: 5px 5px 50px 5px rgba(255, 255, 255, 0.57);
+    height: 150px;
+    width: 150px;
+ 
+}
+
+/* #ul2 {
+    list-style: none;
+    margin-left: 45%;
+    margin-top: 20%;
+} */
+
+#hardBut {
+    height: 110px;
+    width: 110px;
+    border: none;
+    background-color: rgb(163, 76, 175);
+    color: aliceblue;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 60%;
+    margin-top: 20%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+}
+
+#easyBut {
+  
+    height: 110px;
+    width: 110px;
+    border: none;
+    background-color: rgb(220, 136, 231);
+    text-align: center;
+    color: aliceblue;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 15%;
+    margin-top: 20%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+
+    
+}
+
+#easyBut:hover , #easyBut:focus , #hardBut:hover, #hardBut:focus{
+    letter-spacing: 3px;
+    -webkit-box-shadow: 5px 5px 50px 15px rgb(248, 240, 240);
+    transition: all 0.5s ease-out;
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    height: 140px;
+    width: 140px;
+}
+
+#levelDiv {
+    height: 300px;
+    width: 450px;
+    position: absolute;
+    margin-left: 37%;
+    margin-top: 15%;
+    -webkit-box-shadow: 5px 5px 50px 15px rgb(248, 240, 240);
+    border-radius: 30px;
+	-webkit-animation: roll-in-blurred-top 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    animation: roll-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+
+#start {
+    height: auto;
+    width: auto;
+    border: 0cm;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    color: darkgrey;
+    margin-left: 38%;
+    margin-top:50%;
+    letter-spacing: 5px;
+    background: transparent;
+    text-shadow: 10px 10px 20px rgb(255, 255, 255);
+    
+}
+#start:hover {
+    transition: all 1s ease 0s;
+
+    color: #ffffff;
+}
+
+@-webkit-keyframes roll-in-blurred-top {
+    0% {
+      -webkit-transform: translateY(-800px) rotate(-720deg);
+              transform: translateY(-800px) rotate(-720deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0) rotate(0deg);
+              transform: translateY(0) rotate(0deg);
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+  @keyframes roll-in-blurred-top {
+    0% {
+      -webkit-transform: translateY(-800px) rotate(-720deg);
+              transform: translateY(-800px) rotate(-720deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0) rotate(0deg);
+              transform: translateY(0) rotate(0deg);
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+
+#levelP {
+    position: absolute;
+    margin-left: 28%;
+    font-family: monospace;
+    font-size: 30px;
+}
+
+ #records {
+    width:auto;
+    height: auto;
+    background-color: #17192c;
+}
+
+#players {
+    text-align: center;
+    color: #491755;
+    font-size: 20px;
+}
+
+#usersDiv {
+    height: 400px;
+    width: 220px;
+    margin-left: 20px;
+    margin-top: 250px; 
+    background-color: #f5eeee;
+    border-radius: 15px;
+    position:absolute;
+    opacity: 0.8;
+}
+
+#p1 {
+      margin-left: 82%;
+      color: rgb(255, 255, 255);
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 23px;
+      font-weight: 900;
+      text-shadow: 0px 0px 15px rgba(255, 255, 255, 1);
+}
+#p2 {
+    position: fixed;
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+}
+
+ul {
+      color: rgb(162, 89, 177);
+      font-size: 17px;
+      font-weight: 550; 
+}
+
+li {
+    padding: 15px;
+}
+
+#logButton {
+    position: absolute;
+    height: 40px;
+    width: 80px;
+    margin-left: 94%;
+    margin-top: 10px;
+    border-radius: 8px;
+    border:none;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+}
+#logButton:hover, #mainPage:hover {
+    -webkit-box-shadow: 0px 0px 40px 0px rgb(248, 240, 240);
+}
+
+#mainPage {
+    position: absolute;
+    height: 40px;
+    width: 80px;
+    border:none;
+    margin-top: 10px;
+    margin-left: 25px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    font-size: 20px;
+}
+
+a {
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    text-decoration: none;
+}
+
+#form {
+    height: auto;
+    width: 220px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    margin-left: 86%;
+    margin-top: 20px;
+    
+}
+
+#input {
+
+    width: 200px;
+    height: 30px;
+    margin-left: 5px;
+    margin-top: 10px;
+    padding-left: 5px;
+    border: none;
+    border-radius: 8px;
+    background-color: #eee5e5;
+   
+}
+
+#store {
+    margin-left: 55px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 100px;
+    border:none;
+    border-radius: 8px;
+    background-color: #eee5e5;
+}
+
+#d {
+    width: auto;
+    height: auto;
+    color: #ffffff;
+    font-size: 23px;
+    font-weight: bolder;
+    text-align: center;
+    margin-left: 86%;
+    margin-top: 20px;
+
+}
