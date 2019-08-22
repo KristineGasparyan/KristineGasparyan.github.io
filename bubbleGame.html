@@ -5,19 +5,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <script src="bubbleGame.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
         <link rel="stylesheet" type="text/css" href="bubbleGame.css">
         <title>Document</title>
     </head>
     <body background = "d.jpg" onload="showScores();">
     
         <button type="button" id = "logButton" onclick="showLogin()" >Log in</button>
-        <div id="dropdown">
-            <button id="dropbtn">Dropdown</button>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="createDropdown()">Dropdown</button>
+            <div class = "dropdown-content" id  = "myDropdown">
+                <ul id = "dropBoxUl">
+                </ul>
+            </div>
            
         </div>
 
         <button id = "mainPage">
-            <a href="index.html"> ⇐ </a>
+            <a href="index.html" > ⇐ </a>
         </button>
 
         <div id = "levelDiv">

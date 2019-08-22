@@ -1,14 +1,6 @@
 var size;
 var sequent;
 function createTable(){
-	// var input = document.createElement("input");
-	// input.id = "inputSize";
-	// document.body.appendChild(input);
-	// var entSizeBut = document.createElement("button");
-	// entSizeBut.id = "entSizeBut";
-	// entSizeBut.innerHTML = "Change size";
-	// document.body.appendChild(entSizeBut);
-
 	var butt = document.getElementById("a");
 	butt.href = "XO.html";
 

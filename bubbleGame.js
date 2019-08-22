@@ -1,11 +1,10 @@
-
 let  score = 0;
 var tmeo;
 console.log("init");
 function drawCircle(imgID=0) {
 
-    var div = document.getElementById("div");
-    var img = document.createElement("img");
+    var div = $("#div");
+    var img = $('<img>');
     img.src = "crc1.png";
     img.className = "img";
     img.id = imgID;
@@ -177,6 +176,18 @@ function showLogin() {
     logBut.style.display = "none";
 }
 
+function createDropdown() {
+    var ul = document.getElementById("dropBoxUl");
+   
+    for(var i=0, len=localStorage.length; i<len; i++) {
+        var li = document.createElement("li");
+        ul.appendChild(li);
+        var key = localStorage.key(i);
+        li.innerHTML = key;
+    }
+
+}
+
 var user;
 function drawLoggedInUserName() {
     var form = document.getElementById("form").style.display = "none";
@@ -216,11 +227,3 @@ function showScores(key) {
         li.innerHTML = key + ' : ' + value;
     }
 }
-// function deleteScores() {
-//     var ul = document.getElementById("ul");
-//     x = ul.getElementsByTagName("li");
-//     for(var i=0; i < x.length ; i++) {
-//         ul.removeChild(x[i]);
-//     }
-
-// }
