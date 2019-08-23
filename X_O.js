@@ -67,7 +67,7 @@ function onButtonClick(){
 	if(this.innerHTML != ""){
 		return;
 	}
-	if(lastClick == "X"){
+	if(lastClick == "X") {
 		this.innerHTML = "O";
 		lastClick = "O";
 		turnButt.innerHTML = "X TURN NOW";

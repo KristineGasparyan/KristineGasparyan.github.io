@@ -9,24 +9,15 @@
         <link rel="stylesheet" type="text/css" href="bubbleGame.css">
         <title>Document</title>
     </head>
-    <body background = "d.jpg" onload="showScores();">
+    <body background = "back.jpg" onload="showScores();">
     
-        <button type="button" id = "logButton" onclick="showLogin()" >Log in</button>
-        <div class="dropdown">
-            <button class="dropbtn" onclick="createDropdown()">Dropdown</button>
-            <div class = "dropdown-content" id  = "myDropdown">
-                <ul id = "dropBoxUl">
-                </ul>
-            </div>
-           
-        </div>
+        <button type="button" id = "logButton" onclick="showLogin()" >Log in as</button>
 
         <button id = "mainPage">
             <a href="index.html" > ⇐ </a>
         </button>
 
         <div id = "levelDiv">
-            
             <p id = "levelP">SELECT LEVEL</p>
             <button type ="button" id = "easyBut" onclick ="changeSpeed(6,600)" >EASY</button>
             <button type ="button" id = "hardBut" onclick ="changeSpeed(1,300)" >HARD</button> <br>

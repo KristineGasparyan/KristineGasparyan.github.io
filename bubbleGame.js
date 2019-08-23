@@ -5,7 +5,7 @@ function drawCircle(imgID=0) {
 
     var div = $("#div");
     var img = $('<img>');
-    img.src = "crc1.png";
+    img.src = "bubl.png";
     img.className = "img";
     img.id = imgID;
   
@@ -75,7 +75,6 @@ function moveUp(imgID) {
 function deleteImg(imgID) {
     let img = document.getElementById(imgID);
     img.parentNode.removeChild(img);
-
 }
 
 function checkGame() {
@@ -156,9 +155,38 @@ function changeSpeed(sp,sec) {
 }
 
 function showLogin() {
+    var playerDiv = document.createElement("div");
+    playerDiv.id = "plDiv";
+    document.body.appendChild(playerDiv);
+    var usTable = document.createElement("table");
+    document.body.appendChild(usTable);
+    for(var i=0, len=localStorage.length; i<len; i++) {
+        var tr = document.createElement("tr");
+        for(var j=0;j<1;j++) {
+        var td =  document.createElement("td");
+        tr.appendChild(td);
+        td.id = "tdd";
+        var a = document.createElement("a");
+        a.id = "a";
+        td.appendChild(a);
+        var key = localStorage.key(i);
+        a.innerHTML = key;
+        a.onclick = drawChoosedName;
+    }
+}
+
+    var otherUser = document.createElement("button");
+    otherUser.id = "otherUsBut";
+    otherUser.onclick = createForm;
+
+    playerDiv.appendChild(otherUser);
+    var logBut = document.getElementById("logButton");
+    logBut.style.display = "none";
+}
+function createForm() {
     var form = document.createElement("div");
     form.id = "form";
-    
+
     var input = document.createElement("input");
     input.type = "text";
     input.id = "input";
@@ -172,38 +200,35 @@ function showLogin() {
     form.appendChild(input);
     form.appendChild(storeButton);
     document.body.appendChild(form);
-    var logBut = document.getElementById("logButton");
-    logBut.style.display = "none";
 }
 
-function createDropdown() {
-    var ul = document.getElementById("dropBoxUl");
-   
-    for(var i=0, len=localStorage.length; i<len; i++) {
-        var li = document.createElement("li");
-        ul.appendChild(li);
-        var key = localStorage.key(i);
-        li.innerHTML = key;
-    }
-
-}
 
 var user;
 function drawLoggedInUserName() {
-    var form = document.getElementById("form").style.display = "none";
+   document.getElementById("plDiv").style.display = "none";
+   document.getElementById("form").style.display = "none";
     user = document.getElementById("input").value;
     var d = document.createElement("div");
     document.body.appendChild(d);
     d.id = "d";
     d.innerHTML = "Welcome "+ user + " " + "!";
+
 }
- 
+function drawChoosedName() {
+    document.getElementById("plDiv").style.display = "none";
+    user = document.getElementById("a").innerHTML;
+    var d = document.createElement("div");
+    document.body.appendChild(d);
+    d.id = "d";
+    d.innerHTML = "Welcome "+ user + " " + "!";
+
+}
 function ifLoggedIn() {
     if(user != null) {
         drawGame();
     } else {
-        alert ("Please, log in to play!\r\nOr if you have already done that, find your name :)");       
-    }
+        alert ("Please, log in to play");       
+    }         
 }
 
 function storeResult() {
