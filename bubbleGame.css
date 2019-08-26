@@ -280,13 +280,13 @@ button {
     font-weight: 900;
 }
 
-ul {
+#ul1 {
       color: rgb(162, 89, 177);
       font-size: 17px;
       font-weight: 550; 
 }
 
-li {
+#li1 {
     padding: 15px;
 }
 
@@ -306,40 +306,6 @@ li {
     -webkit-box-shadow: 0px 0px 40px 0px rgb(248, 240, 240);
 }
 
-/* .dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-  }
-  
-.dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-.dropdown-content li {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  } */
-/* 
-.dropdown-content li:hover {background-color: #ddd;}
-
-.dropdown:hover .dropdown-content {display: block;}
-
-.dropdown:hover .dropbtn {background-color: #3e8e41;} */
 #mainPage {
     position: absolute;
     height: 40px;
@@ -401,5 +367,12 @@ a {
     text-align: center;
     margin-left: 86%;
     margin-top: 20px;
+}
+
+#plDIv {
+    height: 300px;
+    width: 200px;
+    margin-left: 86%;
+    margin-top: 10px;
 
 }

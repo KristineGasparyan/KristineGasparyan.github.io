@@ -3,8 +3,8 @@ var tmeo;
 console.log("init");
 function drawCircle(imgID=0) {
 
-    var div = $("#div");
-    var img = $('<img>');
+    var div = document.createElement("div");
+    var img = document.createElement("img");
     img.src = "bubl.png";
     img.className = "img";
     img.id = imgID;
@@ -158,22 +158,18 @@ function showLogin() {
     var playerDiv = document.createElement("div");
     playerDiv.id = "plDiv";
     document.body.appendChild(playerDiv);
-    var usTable = document.createElement("table");
-    document.body.appendChild(usTable);
+    var ul = document.createElement("ul");
+    ul.id = "ul2";
+    playerDiv.appendChild(ul);
     for(var i=0, len=localStorage.length; i<len; i++) {
-        var tr = document.createElement("tr");
-        for(var j=0;j<1;j++) {
-        var td =  document.createElement("td");
-        tr.appendChild(td);
-        td.id = "tdd";
-        var a = document.createElement("a");
-        a.id = "a";
-        td.appendChild(a);
+        var li = document.createElement("li");
+        ul.appendChild(li);
+        li.id = "li2";
         var key = localStorage.key(i);
-        a.innerHTML = key;
-        a.onclick = drawChoosedName;
+        li.innerHTML = key;
+        li.onclick = drawChoosedName;
+        li.style.listStyleType = "none";
     }
-}
 
     var otherUser = document.createElement("button");
     otherUser.id = "otherUsBut";
@@ -183,6 +179,7 @@ function showLogin() {
     var logBut = document.getElementById("logButton");
     logBut.style.display = "none";
 }
+
 function createForm() {
     var form = document.createElement("div");
     form.id = "form";
@@ -216,7 +213,7 @@ function drawLoggedInUserName() {
 }
 function drawChoosedName() {
     document.getElementById("plDiv").style.display = "none";
-    user = document.getElementById("a").innerHTML;
+    user = document.getElementById("lii").innerHTML;
     var d = document.createElement("div");
     document.body.appendChild(d);
     d.id = "d";
@@ -241,11 +238,11 @@ function showScores(key) {
     p.innerHTML = "PLAYERS";
     usDiv.appendChild(p);
     var ul = document.createElement("ul");
-    ul.id = "ul";
+    ul.id = "ul1";
     usDiv.appendChild(ul);
     for(var i=0, len=localStorage.length; i<len; i++) {
         var li = document.createElement("li");
-        li.id = "li";
+        li.id = "li1";
         ul.appendChild(li);
         var key = localStorage.key(i);
         var value = localStorage[key];
