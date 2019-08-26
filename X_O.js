@@ -2,7 +2,7 @@ var size;
 var sequent;
 function createTable(){
 	var butt = document.getElementById("a");
-	butt.href = "XO.html";
+	butt.href = "X_O.html";
 
 	var levDiv = document.getElementById("levelDiv");
 	levDiv.style.display = "none";
