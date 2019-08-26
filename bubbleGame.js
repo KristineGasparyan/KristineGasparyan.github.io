@@ -3,7 +3,7 @@ var tmeo;
 console.log("init");
 function drawCircle(imgID=0) {
 
-    var div = document.createElement("div");
+    
     var img = document.createElement("img");
     img.src = "bubl.png";
     img.className = "img";
@@ -158,6 +158,10 @@ function showLogin() {
     var playerDiv = document.createElement("div");
     playerDiv.id = "plDiv";
     document.body.appendChild(playerDiv);
+    var p2 = document.createElement("p");
+    p2.id = "p3";
+    p2.innerHTML = "PLAYERS";
+    playerDiv.appendChild(p2);
     var ul = document.createElement("ul");
     ul.id = "ul2";
     playerDiv.appendChild(ul);
@@ -173,13 +177,22 @@ function showLogin() {
 
     var otherUser = document.createElement("button");
     otherUser.id = "otherUsBut";
+    otherUser.innerHTML = "Other";
     otherUser.onclick = createForm;
 
     playerDiv.appendChild(otherUser);
     var logBut = document.getElementById("logButton");
     logBut.style.display = "none";
 }
+function drawChoosedName() {
+    document.getElementById("plDiv").style.display = "none";
+    user = document.getElementById("li2").innerHTML;
+    var d = document.createElement("div");
+    document.body.appendChild(d);
+    d.id = "d";
+    d.innerHTML = "Welcome "+ user + " " + "!";
 
+}
 function createForm() {
     var form = document.createElement("div");
     form.id = "form";
@@ -211,15 +224,7 @@ function drawLoggedInUserName() {
     d.innerHTML = "Welcome "+ user + " " + "!";
 
 }
-function drawChoosedName() {
-    document.getElementById("plDiv").style.display = "none";
-    user = document.getElementById("lii").innerHTML;
-    var d = document.createElement("div");
-    document.body.appendChild(d);
-    d.id = "d";
-    d.innerHTML = "Welcome "+ user + " " + "!";
 
-}
 function ifLoggedIn() {
     if(user != null) {
         drawGame();

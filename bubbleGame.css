@@ -273,7 +273,8 @@ button {
       text-shadow: 0px 0px 15px rgba(255, 255, 255, 1);
 }
 #p2 {
-    position: fixed;
+    position: relative;
+    text-align: center;
     font-size: 25px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: rgb(255, 255, 255);
@@ -329,8 +330,8 @@ a {
     width: 220px;
     border-radius: 15px;
     background-color: #ffffff;
-    margin-left: 86%;
-    margin-top: 20px;
+    margin-left: 86.5%;
+    margin-top: 350px;
     
 }
 
@@ -369,10 +370,43 @@ a {
     margin-top: 20px;
 }
 
-#plDIv {
-    height: 300px;
+#plDiv{
+    height: auto;
     width: 200px;
-    margin-left: 86%;
+    margin-left: 87%;
     margin-top: 10px;
-
+    position: absolute;
+    -webkit-box-shadow: 0px 0px 30px 0px rgb(248, 240, 240);
+    border-radius: 30px;
+}
+#li2 {
+    font-size: 20px;
+    color:#ffffff ;
+    font-family: monospace;
+    padding: 10px;
+}
+#li2:hover {
+    transition: 0.5s;
+    color: #ecd6d6;
+    font-size: 23px;
+}
+#otherUsBut {
+    position: relative;
+    margin-left: 60px;
+    margin-bottom: 10px;
+    height: 40px;
+    width: 80px;
+    border-radius: 8px;
+    border:none;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+}
+#p3 {
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+    font-family: monospace;
+    color: rgb(255, 255, 255);
+    font-weight: 900;
 }
